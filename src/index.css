@@ -10,6 +10,20 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background: radial-gradient(ellipse at bottom, #f5ff3d 0%, #e6e2a4 45%, #c7b8ff 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 18s ease-in-out infinite;
+  color: #1c1933;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
