@@ -43,12 +43,3 @@ Compliance is built-in — not an afterthought.
 
 - Frontend: HTML, CSS, React
 - Deployment: Vercel
-
-```css
-background: radial-gradient(
-  ellipse at bottom,
-  #f5ff3d 0%,
-  #e6e2a4 40%,
-  #c7b8ff 100%
-);
-```
