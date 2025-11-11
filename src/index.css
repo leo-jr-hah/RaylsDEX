@@ -27,3 +27,36 @@ body {
     background-position: 0% 50%;
   }
 }
+
+.animated-rayls-border {
+  --rayls-angle: 0turn;
+  --rayls-main-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+  --rayls-border: conic-gradient(
+    from var(--rayls-angle),
+    #f5ff3d,
+    #e6e2a4,
+    #c7b8ff,
+    #8b6eff,
+    #f5ff3d
+  );
+  border: 2px solid transparent;
+  border-radius: inherit;
+  background:
+    var(--rayls-main-bg) padding-box,
+    var(--rayls-border) border-box,
+    var(--rayls-main-bg) border-box;
+  background-position: center;
+  animation: raylsBorderSpin 6s linear infinite;
+}
+
+@keyframes raylsBorderSpin {
+  to {
+    --rayls-angle: 1turn;
+  }
+}
+
+@property --rayls-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}

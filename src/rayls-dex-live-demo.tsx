@@ -147,10 +147,10 @@ export default function RaylsDEX() {
         <div className="flex flex-col sm:flex-row gap-4 mb-6">
           <button
             onClick={() => setActiveTab("public")}
-            className={`group relative flex-1 rounded-xl border py-4 px-6 font-semibold transition-all ${
+            className={`group relative flex-1 rounded-xl py-4 px-6 font-semibold transition-all ${
               activeTab === "public"
-                ? "border-transparent bg-gradient-to-r from-[#F5FF3D] via-[#E6E2A4] to-[#C7B8FF] text-slate-900 shadow-[0_20px_45px_rgba(31,28,77,0.25)]"
-                : "border-white/60 bg-white/40 text-slate-600 hover:bg-white/60"
+                ? "bg-gradient-to-r from-[#F5FF3D] via-[#E6E2A4] to-[#C7B8FF] text-slate-900 shadow-[0_20px_45px_rgba(31,28,77,0.25)]"
+                : "border border-white/60 bg-white/40 text-slate-600 hover:bg-white/60"
             }`}
             title="Open to everyone with KYC verification - transparent trading like normal crypto exchanges"
           >
@@ -171,10 +171,10 @@ export default function RaylsDEX() {
           </button>
           <button
             onClick={() => setActiveTab("private")}
-            className={`group relative flex-1 rounded-xl border py-4 px-6 font-semibold transition-all ${
+            className={`group relative flex-1 rounded-xl py-4 px-6 font-semibold transition-all ${
               activeTab === "private"
-                ? "border-transparent bg-gradient-to-r from-[#C7B8FF] via-[#A38BFF] to-[#8B6EFF] text-slate-900 shadow-[0_20px_45px_rgba(63,35,130,0.3)]"
-                : "border-white/60 bg-white/40 text-slate-600 hover:bg-white/60"
+                ? "bg-gradient-to-r from-[#C7B8FF] via-[#A38BFF] to-[#8B6EFF] text-slate-900 shadow-[0_20px_45px_rgba(63,35,130,0.3)]"
+                : "border border-white/60 bg-white/40 text-slate-600 hover:bg-white/60"
             }`}
             title="Private network for banks and institutions - confidential trading with compliance built-in"
           >
@@ -224,7 +224,7 @@ export default function RaylsDEX() {
               )}
             </div>
 
-            <div className="mb-4 rounded-xl border border-white/60 bg-white/80 p-4 shadow-inner">
+            <div className="mb-4 rounded-2xl p-4 shadow-inner animated-rayls-border">
               <div className="mb-2 flex justify-between">
                 <span className="text-sm text-slate-600">From</span>
                 <span className="text-sm text-slate-600">Balance: 10,000</span>
@@ -251,13 +251,13 @@ export default function RaylsDEX() {
               </div>
             </div>
 
-            <div className="relative z-10 -my-2 flex justify-center">
-              <button className="rounded-lg bg-slate-900 p-2 text-white transition-colors hover:bg-slate-800 shadow-lg">
+            <div className="relative z-10 my-6 flex justify-center">
+              <button className="rounded-lg bg-slate-900 p-3 text-white transition-colors hover:bg-slate-800 shadow-lg">
                 <ArrowDownUp className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="mb-6 rounded-xl border border-white/60 bg-white/80 p-4 shadow-inner">
+            <div className="mb-6 rounded-2xl p-4 shadow-inner animated-rayls-border">
               <div className="mb-2 flex justify-between">
                 <span className="text-sm text-slate-600">To</span>
                 <span className="text-sm text-slate-600">
@@ -328,6 +328,26 @@ export default function RaylsDEX() {
                 ZK-proof verification
               </p>
             )}
+
+            <p className="mt-6 mb-2 text-center text-sm font-semibold text-slate-700 sm:text-base">
+              Created by{" "}
+              <a
+                href="https://x.com/crypto_monk_x"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-[#1E1B4B] shadow-[0_10px_30px_rgba(34,18,86,0.15)] transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[#7E6BFF]"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4 fill-current"
+                >
+                  <path d="M18.34 3H21l-6.53 7.46L22 21h-5.66l-4.4-5.7L6.73 21H4.07l6.97-7.96L2 3h5.76l4 5.26L18.34 3Zm-2.13 16h1.17L7.87 5h-1.2l9.54 14Z" />
+                </svg>
+                @crypto_monk_x
+                <span className="text-[11px] text-slate-400">↗</span>
+              </a>
+            </p>
           </div>
 
           <div className="rounded-2xl border border-white/60 bg-white/70 p-6 shadow-[0_25px_70px_rgba(31,24,63,0.2)] backdrop-blur">

@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import raylsFavicon from './rayls.jpg';
+
+const favicon = document.getElementById('favicon') as HTMLLinkElement | null;
+if (favicon) {
+  // Swap the default icon for the Rayls asset.
+  favicon.href = raylsFavicon;
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
